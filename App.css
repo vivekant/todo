@@ -1,13 +1,21 @@
-body{
+body {
   background-color: rgb(162, 164, 167);
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+ 
+  
 }
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 
@@ -21,14 +29,17 @@ body{
   position: relative;
   display: inline-block;
   cursor: pointer;
+  
 }
 
 .options {
   display: none;
   position: absolute;
   background-color: white;
-  min-width: 160px;
-  
+  min-width: max-content;
+  font-size: 15px;
+
+
   z-index: 1;
 }
 
@@ -45,4 +56,149 @@ body{
 
 .options div:hover {
   background-color: #ddd;
+}
+.containe{
+  width: 70vw;
+  height: 90vh;
+  background-color: slategray;
+  margin: 5px auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.todos{
+  overflow-y: scroll;
+  
+  flex-grow: 1;
+  bottom: 10px;
+  
+ 
+}
+
+
+
+.add {
+  width: max-content;
+  font-size: 25px;
+  background: -webkit-linear-gradient(#ff8316, #78e00c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ 
+}
+
+.save {
+  width: max-content;
+  padding: 0px 25px;
+  font-size: 15px;
+
+ 
+}
+
+input {  
+  display: flex;
+  flex-grow: 1;
+  margin: 0px 5px;
+  padding: 0px 5px;
+  border-radius: 7px;
+  
+}
+.heading{
+  font-size: 40px;
+}
+
+.editor {
+  width: 95%;
+  
+  justify-content: space-between;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  margin: 0px auto;
+
+
+}
+.subeditor{
+  display: flex;
+  gap: 5px;
+  flex-grow: 1;
+}
+
+.select{
+  margin-left: 35px;
+    margin-top: -5px;
+    font-size: 23px;
+    min-width: max-content;
+
+}
+.select1{
+  margin-left: 35px;
+    margin-top: -5px;
+    font-size: 15px;
+    margin: 0px 10px;
+}
+.select0{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+.line{
+  width: 96%;
+ border: 0.4px solid greenyellow;
+  margin: 15px auto;
+ 
+}
+.task{
+  font-size: 2rem;
+}
+
+
+@media screen and (max-width: 900px) {
+  .containe {
+  width: 100vw;
+  min-height: 129vh;
+  margin: 0px ;
+
+ 
+ min-width: max-content;
+ padding: 0px;
+  
+  
+  border: 5px solid linear-gradient(to right, red , yellow);
+  }
+ 
+
+  .editor {
+   flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 0px 5px;
+   
+    gap: 0px;
+    
+  }
+  .add{
+    width: 100%;
+    margin-left: 20px;
+  }
+  .subeditor{
+    width: 97%;
+    gap: 5px;
+   margin: auto;
+  }
+input{
+  height: 2rem;
+  border-radius: 7px;
+}
+.save{
+  margin-right: 5px;
+}
+
+
+  
+  
 }
